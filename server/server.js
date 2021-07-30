@@ -9,7 +9,7 @@ let server = http.createServer(app);
 
 // Use the path to send public folder to our Server
 const publicPath = path.resolve(__dirname, '../public');
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001; 
 
 // Use static content to send public folder
 app.use(express.static(publicPath)); 
