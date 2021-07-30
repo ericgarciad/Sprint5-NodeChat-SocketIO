@@ -2,7 +2,7 @@
   "name": "nodechat_socket",
   "version": "1.0.0",
   "description": "Chat Node Socket",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ericgarciad/nodechat_socket/issues"
   },
-  "homepage": "https://github.com/ericgarciad/nodechat_socket#readme"
+  "homepage": "https://github.com/ericgarciad/nodechat_socket#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.3"
+  }
 }
