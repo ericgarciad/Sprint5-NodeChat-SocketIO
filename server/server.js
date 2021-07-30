@@ -12,7 +12,7 @@ const publicPath = path.resolve(__dirname, '../public');
 const port = process.env.PORT || 3001;
 
 // Use static content to send public folder
-app.use(express.static(publicPath));
+app.use(express.static(publicPath)); 
 
 // Create the communication with the backend and at the end of the page we export "io"
 io = socketIO(server);
