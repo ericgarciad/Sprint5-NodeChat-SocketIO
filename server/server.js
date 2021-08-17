@@ -15,10 +15,10 @@ const port = process.env.PORT || 3001;
 app.use(express.static(publicPath)); 
 
 // Create the communication with the backend and at the end of the page we export "io"
-io = socketIO(server);
+module.exports.io = socketIO(server);
 
 // Separate the sockets code to make a clean structure code and we call here to run in our Servers
-//require('./sockets/socket');
+require('./sockets/socket');
 
 
 
@@ -29,5 +29,3 @@ server.listen(port, (err) => {
     console.log(`Server running in port ${ port }`);
 
 });
-
-module.exports = io;
