@@ -8,7 +8,7 @@ let checkSala = document.getElementById('checkSala');
 
 function checkInput() {
     console.log("nombre " + nombre)
-
+ 
     if ((nombre.value || sala.value) == '') {
         checkNombre.innerHTML = `<div class="alert alert-danger" role="alert">
     Please enter a Username

@@ -39,7 +39,7 @@ function renderizarUsuarios(personas) { // [{},{},{}]
         html += '</div>';
         html += '</div>';
         html += '</div>';
-
+ 
     }
 
     document.getElementById("divUsuarios").innerHTML = html
