@@ -1,8 +1,8 @@
 {
   "name": "nodechat_socket",
   "version": "1.0.0",
-  "description": "Chat Node Socket",
-  "main": "server.js",
+  "description": "Chat_Node_Socket",
+  "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js"
   },
@@ -10,8 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/ericgarciad/nodechat_socket.git"
   },
-  "author": "Eric Garcia",
+  "author": "EricGarcia",
   "license": "ISC",
+  "engines": {
+    "node": "14.15.4"
+  },
   "bugs": {
     "url": "https://github.com/ericgarciad/nodechat_socket/issues"
   },
