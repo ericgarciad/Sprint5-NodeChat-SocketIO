@@ -31,7 +31,7 @@ function renderizarUsuarios(personas) { // [{},{},{}]
     var html = '';
 
     html += '<h3><li class="text-center">';
-    html += '    <a href="javascript:void(0)" class="active"> CHAT <span> ' + '<br>' + params.get('sala') + '</span></a>';
+    html += '    <a href="javascript:void(0)" class="active" style="color: #FFFFFF;"> CHAT <span> ' + '<br>' + params.get('sala') + '</span></a>';
     html += '</li></h3>';
 
     for (var i = 0; i < personas.length; i++) {
