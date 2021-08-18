@@ -37,3 +37,15 @@ function checkInput() {
 
 }
 
+
+var info = document.getElementById('info');
+info.style.display = 'none';
+
+function toggleInfo(){
+    if (info.style.display === "none") {
+        info.style.display = "block";
+      } else {
+        info.style.display = "none";
+      }
+}
+
