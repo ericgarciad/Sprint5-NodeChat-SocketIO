@@ -172,35 +172,22 @@ formEnviar.addEventListener('submit', function (e) {
 
 
 
-
     //Scroll messages
-    var inteval = 0;
-
-    var msg_history = document.getElementById('msg_history');
-
-
-    // Initial state
-    var scrollPos = 0;
-    // adding scroll event
-    msg_history.addEventListener('scroll', function () {
-        // detects new state and compares it with the new one
-        if ((document.body.getBoundingClientRect()).top > scrollPos)
-            console.log("up")
-        else
-            console.log("down")
-            inteval = 5000;
-        // saves the new position for iteration.
-        scrollPos = (document.body.getBoundingClientRect()).top;
-    });
-
-
-
-    setInterval(function () {
+    var intervalScroll = setInterval(function () {
         var elem = document.getElementById('msg_history');
         elem.scrollTop = elem.scrollHeight;
-    }, inteval);
+    }, 0);
+
+    if (!txtMensaje.value) {
+        setTimeout(function () {
+            clearInterval(intervalScroll);
+        }, 10)
+
+    }
+
 
 
 
 });
+
 
