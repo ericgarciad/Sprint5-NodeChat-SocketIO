@@ -175,10 +175,10 @@ formEnviar.addEventListener('submit', function (e) {
 
     
     //Scroll messages
-    setInterval(function () {
+    setTimeout(function () {
         var elem = document.getElementById('msg_history');
         elem.scrollTop = elem.scrollHeight;
-    }, 0);
+    }, 10);
 
   
 
