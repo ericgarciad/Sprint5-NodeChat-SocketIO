@@ -173,16 +173,12 @@ formEnviar.addEventListener('submit', function (e) {
 
 
 
-    setTimeout(function(){
-        setInterval(function () {
-            var elem = document.getElementById('msg_history');
-            elem.scrollTop = elem.scrollHeight;
-        }, 0);
-    }, 10000)
-
+    //Scroll messages
+    setInterval(function () {
+        var elem = document.getElementById('msg_history');
+        elem.scrollTop = elem.scrollHeight;
+    }, 0);
 
   
 
 });
-
-
