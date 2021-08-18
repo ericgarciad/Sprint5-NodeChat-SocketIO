@@ -29,6 +29,7 @@ a {
 
 body {
   padding: 20px;
+  background-color: black !important;
 }
 
 
@@ -90,7 +91,7 @@ img{ max-width:100%;}
   margin: 0;
   padding: 18px 16px 10px;
 }
-.inbox_chat {  height: 550px; }
+.inbox_chat {  height: 550px; background-color: rgb(194, 194, 194);}
 
 .mlmr{
   margin-left: auto; margin-right: auto
@@ -178,8 +179,10 @@ img{ max-width:100%;}
 .msg_history {
   height: 516px;
   overflow-y: auto;
+  background-color: rgb(194, 194, 194);
 }
 
 .textR{
   text-align: right;
 }
+
