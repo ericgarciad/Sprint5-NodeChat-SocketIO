@@ -170,9 +170,11 @@ formEnviar.addEventListener('submit', function (e) {
     //Delete text
     txtMensaje.value = '';
 
+
+
+    
     //Scroll messages
     setTimeout(function () {
-        console.log('hola')
         var elem = document.getElementById('msg_history');
         elem.scrollTop = elem.scrollHeight;
     }, 0);
