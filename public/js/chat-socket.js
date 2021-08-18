@@ -12,7 +12,7 @@ var usuario = {
 };
 
 socket.on('connect', function() {
-    console.log('Conectado al servidor');
+    console.log('Connected to server');
 
     socket.emit('entrarChat', usuario, function(resp) {
         // console.log('Usuarios conectados', resp);
@@ -24,7 +24,7 @@ socket.on('connect', function() {
 // escuchar
 socket.on('disconnect', function() {
 
-    console.log('Perdimos conexión con el servidor');
+    console.log('Lost connection with the server');
 
 });
 
@@ -39,11 +39,4 @@ socket.on('crearMensaje', function(mensaje) {
 // cuando un usuario entra o sale del chat
 socket.on('listaPersona', function(personas) {
     renderizarUsuarios(personas);
-});
-
-// Mensajes privados
-socket.on('mensajePrivado', function(mensaje) {
-
-    console.log('Mensaje Privado:', mensaje);
-
 });
