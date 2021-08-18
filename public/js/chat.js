@@ -178,7 +178,7 @@ formEnviar.addEventListener('submit', function (e) {
     setTimeout(function () {
         var elem = document.getElementById('msg_history');
         elem.scrollTop = elem.scrollHeight;
-    }, 500);
+    }, 0);
 
   
 
