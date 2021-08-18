@@ -90,9 +90,17 @@ img{ max-width:100%;}
   margin: 0;
   padding: 18px 16px 10px;
 }
-.inbox_chat { height: 550px; overflow-y: scroll;}
+.inbox_chat {  height: 550px; }
+
+.mlmr{
+  margin-left: auto; margin-right: auto
+}
 
 .active_chat{ background:#ebebeb;}
+
+.incoming_chat{ background:#ebebeb;}
+
+.outcoming_chat{ background:#05728F;}
 
 .incoming_msg_img {
   display: inline-block;
@@ -167,4 +175,8 @@ img{ max-width:100%;}
 .msg_history {
   height: 516px;
   overflow-y: auto;
+}
+
+.textR{
+  text-align: right;
 }

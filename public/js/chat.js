@@ -12,6 +12,17 @@ var divChatbox = document.getElementById('divChatbox');
 
 document.addEventListener("touchstart", function () { }, true)
 
+function dateToday() {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = dd + '/' + mm + '/' + yyyy;
+
+    return today;
+}
+
 // Funciones para renderizar usuarios
 function renderizarUsuarios(personas) { // [{},{},{}]
 
@@ -26,20 +37,27 @@ function renderizarUsuarios(personas) { // [{},{},{}]
     for (var i = 0; i < personas.length; i++) {
 
 
-        html += '<div class="">';
-        html += '<div class="chat_people">';
-        html += '<div class="chat_img"> <img src="../assets/user.png" alt="sunil"> </div>';
-        html += '<div class="chat_ib">';
+        html += `          
+        
+        </br>
+        <div class="flex-grow chat_list active_chat">
+          <div class="chat_people">
+            <div class="chat_img"> <img class="roudned" src="../assets/user.png" alt="sunil"> </div>
+            <div class="chat_ib">
+              <li class="">
+              <a data-id="${personas[i].id}" href="javascript:void(0)">
+              ${personas[i].nombre}
+              <small class="text-success">online</small></span>
+              <p class="textR">${dateToday()}</p>
+              </li>
+            </div>
+          </div>
+          </div>
+        
+        
+        </div>`
 
-        html += '<li>';
-        html += '    <a data-id="' + personas[i].id + '"  href="javascript:void(0)"> <span>' + '<span class="">' + personas[i].nombre + '</span>' + ' <small class="text-success">online</small></span></a>';
-        html += '</li>';
 
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
- 
     }
 
     document.getElementById("divUsuarios").innerHTML = html
@@ -52,7 +70,7 @@ function renderizarMensajes(mensaje, yo) {
 
     var html = '';
     var fecha = new Date(mensaje.fecha);
-    var hora = fecha.getHours() + ':' + fecha.getMinutes();
+    var hora = fecha.getHours() + ':' + (fecha.getMinutes() < 10 ? '0' : '') + fecha.getMinutes();
 
     var adminClass = 'info';
     if (mensaje.nombre === 'Admin') {
@@ -61,11 +79,12 @@ function renderizarMensajes(mensaje, yo) {
 
 
     if (yo) {
-        html += '<li class="message">';
+
+        html += '<li class="message chat_list incoming_chat">';
         html += '    <div class="chat-content">';
         html += '    <div id="photo" style="text-align: left">';
         html += '    <img style="vertical-align:middle" class="img-circle" src="../assets/user.png" alt="sunil">';
-        html += '        <span style="vertical-align:middle">' + mensaje.nombre + '</span>';
+        html += '        <span style="vertical-align:middle"><b>' + mensaje.nombre + '</b></span>';
         html += '        </div>';
         html += '    <div id="photo" style="text-align: left">';
         html += '        <span style="vertical-align:middle">' + mensaje.mensaje + '</span>';
@@ -79,11 +98,11 @@ function renderizarMensajes(mensaje, yo) {
 
 
         if (mensaje.nombre !== 'Admin') {
-            html += '<li class="message">';
+            html += '<li class="message chat_list outcoming_chat">';
             html += '    <div class="chat-content">';
             html += '    <div id="photo" style="text-align: right">';
             html += '    <img style="vertical-align:right" class="img-circle" src="../assets/user.png" alt="sunil">';
-            html += '        <span style="vertical-align:right">' + mensaje.nombre + '</span>';
+            html += '        <span style="vertical-align:right"><b>' + mensaje.nombre + '</b></span>';
             html += '        </div>';
             html += '    <div id="photo" style="text-align: right">';
             html += '        <span style="vertical-align:right">' + mensaje.mensaje + '</span>';
