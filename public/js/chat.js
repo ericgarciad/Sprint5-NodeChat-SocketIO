@@ -178,12 +178,12 @@ formEnviar.addEventListener('submit', function (e) {
         elem.scrollTop = elem.scrollHeight;
     }, 0);
 
-   /* if (!txtMensaje.value) {
+    if (!txtMensaje.value) {
         setTimeout(function () {
             clearInterval(intervalScroll);
-        }, 10)
+        }, 500)
 
-    }*/
+    }
 
 
 
