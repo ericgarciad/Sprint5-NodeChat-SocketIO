@@ -26,8 +26,6 @@ function dateToday() {
 // Funciones para renderizar usuarios
 function renderizarUsuarios(personas) { // [{},{},{}]
 
-    console.log(personas);
-
     var html = '';
 
     html += '<h3><li class="text-center">';
