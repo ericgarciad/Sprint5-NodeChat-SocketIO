@@ -15,7 +15,7 @@ document.addEventListener("touchstart", function () { }, true)
 function dateToday() {
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
     var yyyy = today.getFullYear();
 
     today = dd + '/' + mm + '/' + yyyy;
@@ -167,8 +167,6 @@ formEnviar.addEventListener('submit', function (e) {
 
     //Delete text
     txtMensaje.value = '';
-
-
 
     //Scroll messages
     var intervalScroll = setInterval(function () {
