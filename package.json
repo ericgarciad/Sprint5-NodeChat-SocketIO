@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/server.js"
   },
-  "repository": {
+  "repository": { 
     "type": "git",
     "url": "git+https://github.com/ericgarciad/nodechat_socket.git"
   },

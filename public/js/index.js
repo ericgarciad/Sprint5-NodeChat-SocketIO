@@ -10,7 +10,7 @@ function checkInput() {
 
   if ((nombre.value || sala.value) == '') {
     checkNombre.innerHTML = `<div class="alert alert-danger" role="alert">
-    Please enter a Username
+    Please enter a Username 
   </div>`
 
     checkSala.innerHTML = `<div class="alert alert-danger" role="alert">

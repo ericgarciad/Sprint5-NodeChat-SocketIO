@@ -8,4 +8,4 @@ Or open the project and do:
 
 - npm start
 
-Open two or more windows and enter any Username and the same Chat Room to chat together.
+Open two or more windows and enter any Username and the same Chat Room to chat together. 

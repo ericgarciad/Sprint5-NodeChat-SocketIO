@@ -36,7 +36,7 @@ io.on('connection', (client) => {
 
         callback(mensaje);
     });
-
+ 
 
     client.on('disconnect', () => {
 

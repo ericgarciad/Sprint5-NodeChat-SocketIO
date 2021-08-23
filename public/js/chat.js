@@ -6,7 +6,7 @@ var sala = params.get('sala');
 
 // referencias de jQuery
 var divUsuarios = document.getElementById('divUsuarios');
-var formEnviar = document.getElementById('formEnviar');
+var formEnviar = document.getElementById('formEnviar'); 
 var txtMensaje = document.getElementById('txtMensaje');
 var divChatbox = document.getElementById('divChatbox');
 
